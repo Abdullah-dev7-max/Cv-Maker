@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder - Create Professional CVs</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar">
+        <!-- Logo Section (left) -->
+        <div class="logo">
+            <img src="images/logo.png" alt="CV Builder logo">
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Create CV</a></li>
+            <li><a href="NavPages/templates/templates.html">CV Templates</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Fullscreen Overlay Navigation for Mobile -->
+        <div class="mobile-overlay">
+            <div class="close-btn">&times;</div>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Create Cv</a></li>
+                <li><a href="NavPages/templates/templates.html">CV Templates</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== INTRO SECTION ========== -->
+    <section class="intro-section">
+        <!-- Background video (replace src with your video file or URL) -->
+        <video class="intro-bg-video" autoplay muted loop playsinline>
+            <source src="images/videos/12920671-hd_1920_1080_30fps.mp4" type="video/mp4">
+            <!-- If you want to use an external link, replace the src above with the absolute URL -->
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="intro-container">
+            <!-- Centered Text Content (single column) -->
+            <div class="intro-content">
+                <h1 class="main-heading">
+                    Create the CV that gets the job <span class="highlight">Done.</span>
+                </h1>
+                <p class="sub-heading">
+                    Build your CV to improve yourself.
+                </p>
+                <button class="cta-button" onclick="scrollToTemplates()">
+                    <span>Create Now   </span>
+                    <!-- SVG border used for the animated moving-border effect -->
+                    <svg class="cta-border" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <rect x="1" y="1" width="218" height="58" rx="40" ry="40" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TUTORIAL SECTION ========== -->
+    <section class="tutorial-section" id="tutorialSection">
+        <div class="tutorial-container">
+            <div class="tutorial-left">
+                <h2>Tutorial: How to Use CV Maker</h2>
+                <p>
+                    Welcome to CV Maker — this short guide will walk you through creating
+                    a professional CV using our templates and editor. Use this space to
+                    add detailed instructions, tips, examples, or step-by-step guidance.
+                </p>
+                <p>
+                    Example steps:
+                </p>
+                <ol>
+                    <li>Choose a template from the Templates section.</li>
+                    <li>Click "Create Now" to open the editor modal.</li>
+                    <li>Fill in your personal information, education, experience and skills.</li>
+                    <li>Use the customization panel to adjust colors, fonts and layout.</li>
+                    <li>Preview your CV, then generate or download as PDF.</li>
+                </ol>
+                <p>
+                    Replace this text with a longer tutorial that suits your users. You
+                    can include screenshots, tips on wording, and recommended formatting.
+                </p>
+            </div>
+            <div class="tutorial-right">
+                <!-- Replace the source with your tutorial video file when ready -->
+                <video class="tutorial-video" controls playsinline preload="metadata" poster="images/tutorial Img.jpg">
+                    <source src="images/videos/tutorial.mp4"  type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== TEMPLATE SELECTION SECTION ========== -->
+    <section class="template-section" id="templateSection">
+        <!-- Section Heading -->
+        <h2 class="section-heading">Select Your Template From Here</h2>
+        
+        <!-- Template Carousel Container -->
+        <div class="carousel-container">
+            <!-- Left Arrow Button -->
+            <button class="arrow-btn left-arrow" onclick="scrollTemplates('left')">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M18.75 22.5L11.25 15L18.75 7.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <!-- Template Carousel Wrapper -->
+            <div class="template-carousel">
+                <!-- Template 1 -->
+                <div class="template-card" data-template="1">
+                    <img src="images/temp img/1.jpg" alt="Professional CV Template 1 with clean layout header and sections">
+                    <button class="create-btn" onclick="startCVCreation(1)">Create Now</button>
+                </div>
+                
+                <!-- Template 2 -->
+                <div class="template-card" data-template="2">
+                    <img src="images/temp img/2.jpg" alt="Modern CV Template 2 with sidebar and profile photo">
+                    <button class="create-btn" onclick="startCVCreation(2)">Create Now</button>
+                </div>
+                
+                <!-- Template 3 -->
+                <div class="template-card" data-template="3">
+                    <img src="images/temp img/3.jpg" alt="Creative CV Template 3 with colorful header and skills">
+                    <button class="create-btn" onclick="startCVCreation(3)">Create Now</button>
+                </div>
+                
+                <!-- Template 4 -->
+                <div class="template-card" data-template="4">
+                    <img src="images/temp img/4.jpg" alt="Executive CV Template 4 with professional photo section">
+                    <button class="create-btn" onclick="startCVCreation(4)">Create Now</button>
+                </div>
+                
+                <!-- Template 5 -->
+                <div class="template-card" data-template="5">
+                    <img src="images/temp img/5.jpg" alt="Minimalist CV Template 5 with simple clean design">
+                    <button class="create-btn" onclick="startCVCreation(5)">Create Now</button>
+                </div>
+                
+                <!-- Template 6 -->
+                <div class="template-card" data-template="6">
+                    <img src="images/temp img/6.png" alt="Corporate CV Template 6 with photo and timeline">
+                    <button class="create-btn" onclick="startCVCreation(6)">Create Now</button>
+                </div>
+                
+                <!-- Template 7 -->
+                <div class="template-card" data-template="7">
+                    <img src="images/temp img/7.jpg" alt="Elegant CV Template 7 with classic layout no photo">
+                    <button class="create-btn" onclick="startCVCreation(7)">Create Now</button>
+                </div>
+                
+                <!-- Template 8 -->
+                <div class="template-card" data-template="8">
+                    <img src="images/temp img/8.png" alt="Bold CV Template 8 with striking colors and photo">
+                    <button class="create-btn" onclick="startCVCreation(8)">Create Now</button>
+                </div>
+            </div>
+            
+            <!-- Right Arrow Button -->
+            <button class="arrow-btn right-arrow" onclick="scrollTemplates('right')">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M11.25 22.5L18.75 15L11.25 7.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Dot Indicators for Template Navigation -->
+        <div class="dot-indicators">
+            <span class="dot active" onclick="goToTemplate(0)"></span>
+            <span class="dot" onclick="goToTemplate(1)"></span>
+            <span class="dot" onclick="goToTemplate(2)"></span>
+            <span class="dot" onclick="goToTemplate(3)"></span>
+            <span class="dot" onclick="goToTemplate(4)"></span>
+            <span class="dot" onclick="goToTemplate(5)"></span>
+            <span class="dot" onclick="goToTemplate(6)"></span>
+            <span class="dot" onclick="goToTemplate(7)"></span>
+        </div>
+    </section>
+
+    <!-- ========== CV CREATION MODAL ========== -->
+    <div class="modal" id="cvModal">
+        <div class="modal-content">
+            <!-- Modal Header with Close Button -->
+            <div class="modal-header">
+                <h2>Create Your CV - <span id="templateName">Template 1</span></h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <!-- CV Creation Form -->
+            <div class="modal-body">
+                <!-- Theme and Style Customization -->
+                <div class="customization-panel">
+                    <h3>Customize Your CV</h3>
+                    <div class="custom-options">
+                        <div class="option-group">
+                            <label>Heading Color:</label>
+                            <input type="color" id="themeColor" value="#4F46E5" onchange="updateTheme()">
+                        </div>
+                        <div class="option-group">
+                            <label>Text Color:</label>
+                            <input type="color" id="textColor" value="#374151" onchange="updateTextColor()">
+                        </div>
+                        <div class="option-group">
+                            <label>Font Style:</label>
+                            <div class="font-options">
+                                <button type="button" class="font-option" style="font-family: 'Poppins', sans-serif; font-weight: 500" onclick="selectFont('Poppins')" data-font="Poppins">Poppins</button>
+                                <button type="button" class="font-option" style="font-family: 'Arial', sans-serif; font-weight: 500" onclick="selectFont('Arial')" data-font="Arial">Arial</button>
+                                <button type="button" class="font-option" style="font-family: 'Georgia', serif; font-weight: 500" onclick="selectFont('Georgia')" data-font="Georgia">Georgia</button>
+                                <button type="button" class="font-option" style="font-family: 'Times New Roman', serif; font-weight: 500" onclick="selectFont('Times New Roman')" data-font="Times New Roman">Times New Roman</button>
+                                <button type="button" class="font-option" style="font-family: 'Roboto', sans-serif; font-weight: 500" onclick="selectFont('Roboto')" data-font="Roboto">Roboto</button>
+                                <button type="button" class="font-option" style="font-family: 'Trebuchet MS', sans-serif; font-weight: 500" onclick="selectFont('Trebuchet MS')" data-font="Trebuchet MS">Trebuchet MS</button>
+                                <button type="button" class="font-option" style="font-family: 'Verdana', sans-serif; font-weight: 500" onclick="selectFont('Verdana')" data-font="Verdana">Verdana</button>
+                                <button type="button" class="font-option" style="font-family: 'Courier New', monospace; font-weight: 500" onclick="selectFont('Courier New')" data-font="Courier New">Courier New</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CV Data Input Form -->
+                <form id="cvForm" class="cv-form">
+                    <!-- Photo Upload Section (conditional) -->
+                    <div class="form-section photo-section" id="photoSection" style="display: none;">
+                        <h3>Profile Photo</h3>
+                        <div class="photo-upload">
+                            <input type="file" id="photoInput" accept="image/*" onchange="previewPhoto(event)">
+                            <div class="photo-preview" id="photoPreview">
+                                <p>Upload passport size photo with white or blue background</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <input type="text" id="fullName" placeholder="Full Name" required>
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                            <input type="text" id="address" placeholder="Address" required>
+                        </div>
+                        <textarea id="summary" placeholder="Professional Summary" rows="4"></textarea>
+                    </div>
+                    
+                    <!-- Education Section -->
+                    <div class="form-section">
+                        <h3>Education</h3>
+                        <div id="educationContainer">
+                            <div class="education-entry">
+                                <input type="text" placeholder="Degree/Qualification" class="education-degree">
+                                <input type="text" placeholder="Institution Name" class="education-institution">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Year (e.g., 2020-2024)" class="education-year">
+                                    <input type="text" placeholder="Grade/CGPA" class="education-grade">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="add-btn" onclick="addEducation()">+ Add Education</button>
+                    </div>
+                    
+                    <!-- Experience Section -->
+                    <div class="form-section">
+                        <h3>Work Experience</h3>
+                        <div id="experienceContainer">
+                            <div class="experience-entry">
+                                <input type="text" placeholder="Job Title" class="experience-title">
+                                <input type="text" placeholder="Company Name" class="experience-company">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Duration (e.g., 2020-2022)" class="experience-duration">
+                                </div>
+                                <textarea placeholder="Job Description & Responsibilities" rows="3" class="experience-description"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="add-btn" onclick="addExperience()">+ Add Experience</button>
+                    </div>
+                    
+                    <!-- Skills Section -->
+                    <div class="form-section">
+                        <h3>Skills</h3>
+                        <div id="skillsContainer">
+                            <div class="skill-entry">
+                                <input type="text" placeholder="Skill Name" class="skill-name">
+                                <select class="skill-level">
+                                    <option value="Beginner">Beginner</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Advanced">Advanced</option>
+                                    <option value="Expert">Expert</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="add-btn" onclick="addSkill()">+ Add Skill</button>
+                    </div>
+                    
+                    <!-- Additional Sections -->
+                    <div class="form-section">
+                        <h3>Activities</h3>
+                        <textarea id="languages" placeholder="e.g., Volunteering, Committee activities, etc." rows="2"></textarea>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Certifications (Optional)</h3>
+                        <textarea id="certifications" placeholder="List your certifications" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Hobbies/Interests (Optional)</h3>
+                        <textarea id="hobbies" placeholder="Your hobbies and interests" rows="2"></textarea>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer with Action Buttons -->
+            <div class="modal-footer">
+                <button class="preview-btn" onclick="previewCV()">Preview CV</button>
+                <button class="generate-btn" onclick="generateCV()">Generate CV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== CV PREVIEW MODAL ========== -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content preview-modal">
+            <!-- Preview Header -->
+            <div class="modal-header">
+                <h2>CV Preview</h2>
+                <button class="close-btn" onclick="closePreview()">&times;</button>
+            </div>
+            
+            <!-- CV Preview Area -->
+            <div class="modal-body preview-body">
+                <div id="cvPreview" class="cv-preview"></div>
+            </div>
+            
+            <!-- Preview Footer with Download/Print Options -->
+            <div class="modal-footer">
+                <button class="back-btn" onclick="closePreview()">Back to Edit</button>
+                <button class="download-btn" onclick="downloadCV()">Download PDF</button>
+                <button class="print-btn" onclick="printCV()">Print CV</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- JavaScript File -->
+    <!-- html2pdf (convert HTML to PDF) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+        <!-- Site Footer -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="images/logo.png" width="100px" alt="CV Builder logo">
+                    <p>Build professional CVs quickly — modern, clean templates ready to edit and download.</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.92c-.6.27-1.23.46-1.9.54.68-.4 1.2-1.04 1.45-1.8-.63.37-1.32.64-2.06.8C18.9 4.5 17.98 4 17 4c-1.66 0-3 1.34-3 3 0 .24.03.47.08.7C10.1 7.56 7.16 6.1 5 3.6c-.26.45-.41.97-.41 1.52 0 1.05.53 1.98 1.34 2.52-.5-.02-.97-.15-1.38-.38v.04c0 1.47 1.05 2.7 2.45 2.98-.26.07-.53.11-.81.11-.2 0-.4-.02-.59-.06.4 1.25 1.54 2.16 2.9 2.19C8.2 15.3 7.1 15.86 6 15.86c-.25 0-.5-.01-.74-.05 1.44.92 3.14 1.47 4.98 1.47 5.97 0 9.25-4.94 9.25-9.22v-.42c.64-.46 1.2-1.03 1.64-1.68-.58.26-1.2.44-1.85.52z" fill="#cbd5e1"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.6 4.14 5.5 3 5.5 1.86 5.5 1 4.6 1 3.5 1 2.4 1.86 1.5 3 1.5 4.14 1.5 4.98 2.4 4.98 3.5zM.5 8h4.5v13H.5V8zM9 8h4.3v1.7h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.5 3 5.5 6.9V21h-4.5v-5.1c0-1.2 0-2.8-1.7-2.8-1.7 0-2 1.4-2 2.7V21H9V8z" fill="#cbd5e1"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="col">
+                        <h4 style="color:#fff;margin-bottom:8px">Company</h4>
+                        <a href="#">About</a><br>
+                        <a href="#">Careers</a><br>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div class="col">
+                        <h4 style="color:#fff;margin-bottom:8px">Support</h4>
+                        <a href="#">Help Center</a><br>
+                        <a href="#">Contact</a><br>
+                        <a href="#">Privacy</a>
+                    </div>
+                    <div class="col">
+                        <h4 style="color:#fff;margin-bottom:8px">Resources</h4>
+                        <a href="#">Templates</a><br>
+                        <a href="#">How to write CV</a><br>
+                        <a href="#">Pricing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">© <span id="footerYear"></span> CV Builder. All rights reserved.</div>
+        </footer>
+</body>
+</html>
